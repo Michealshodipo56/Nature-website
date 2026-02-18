@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    border-bottom: 3px solid yellow;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid blue;
+    align-items: center;
+}
+.home{
+    width: 2em;
+}
+.svg{
+    width: 1.5em;
+    fill: white;
+    margin-right: 0.3em;
+}
+.logo{
+    width: 1.5em;
+}
+nav button{
+    margin-right: 0.5em;
+    background-color: gold;
+    font-size: 1em;
+    border-radius: 0.4em;
+    border: none;
+    font-weight: bold;
+    width: 5em;
+    cursor: pointer;
+}
+
+
+
+
+.my-logo{
+    width: 10em;
+    animation: 1s down forwards ease-in-out;
+    opacity: 0;
+}
+@keyframes down {
+    from{transform: translateY(-100px);}
+    to{transform: translateY(0); opacity: 1;}
+}
+.box{
+    text-align: center;
+    margin-top: 5em;
+}
+.text{
+    text-align: center;
+    font-size: 3rem;
+}
+.slogan{
+    text-align: center;
+    font-size: 20px;
+}
+.visit{
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 8em;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: alternate-reverse 1s moving infinite;
+}
+@keyframes moving{
+    form{transform: translateY(10px);}
+    to{transform: translateY(10px);}
+}
+.button-div{
+    text-align: center;
+}

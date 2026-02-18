@@ -1,0 +1,293 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #E6E6FA;
+}
+.help{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    right: 0;
+    background-color: #000;
+    margin: 1.3em 0.2em 0em 0em;
+    top: 0;
+    width: 1.2em;
+    text-align: center;
+    border-radius: 50px;
+}
+nav{
+    text-align: center;
+    width: 80%;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 12px;
+    margin-left: 11em;
+    padding: 8px 0px 8px 0px;
+    margin-top: 1.5em;
+}
+nav a{
+    text-decoration: none;
+    padding: 0% 5% 0% 5%;
+    font-size: 21px;
+    color: #fff;
+}
+.logo{
+    position: absolute;
+    width: 7em;
+    top: 0;
+    padding: 0.5em;
+    animation: movedown 1s ease-in-out forwards;
+}
+.nature{
+    text-decoration: underline;
+}
+.nature:hover{
+    color: #ffd700;
+}
+.wildlife:hover{
+    color: red;
+}
+.plants:hover{
+    color: #32cd32;
+}
+.wonders:hover{
+    color: brown;
+}
+.ocean:hover{
+    color: #0033FF;
+}
+.closebtn{
+    position: absolute;
+    visibility: hidden;
+}
+.menu{
+    position: absolute;
+    width: 0;
+}
+.slogan{
+    width: 99%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg{
+    width: 45%;
+}
+.button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    border: none;
+    font-weight: bolder;
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0);
+    align-self: center;
+    transition: ease-in-out 0.5s;
+    animation: pop alternate-reverse infinite 1s;
+}
+.button:hover{
+    background-color: #ffd700;
+    color: #fff;
+}
+.button-div{
+    text-align: center;
+}
+.writeup-div{
+    position: absolute;
+    bottom: 0;
+}
+.writeup{
+    color: white;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    transition: ease-in-out 1s;
+}
+.writeup:hover{
+    background-color: #ffd700;
+}
+marquee{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.mylogo{
+    width: 3em;
+}
+.logo-div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+}
+.writeup2-div{
+    visibility: hidden;
+}
+.open{
+    transform: translateX(0%);
+}
+
+@keyframes pop{
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes movedown{
+	from{ transform: translateY(-100px);
+	}
+	to{ transform: translateY(0);
+		opacity: 1;
+	}
+}
+@media only screen and (max-width: 1185px) {
+	nav{
+		margin-left: 8em;
+		}
+	}
+@media only screen and (max-width: 1120px) {
+    nav a{
+        padding: 0% 4% 0% 4%;
+        }
+}
+@media only screen and (max-width: 818px) {
+    .logo{
+		width: 80px;
+		margin-left: 10px;
+		}
+    nav{
+        margin-left: 7em;
+        }
+    nav a{
+        padding: 0 20px 0 20px;
+        }
+    .writeup{
+        display: none;
+    }
+    .writeup2-div{
+        visibility: visible;
+        text-align: center;
+    }
+    .writeup2{
+        text-align: center;
+        padding: 5%;
+        padding-top: 10%;
+    }
+    body{
+        background-size: 100% 58%;
+    }
+    html{
+        height: 100%;
+    }
+    .slogan{
+        width: 100%;
+        height: 40vh;
+    }
+    .svg{
+        width: 55%;
+    }
+    .mylogo{
+        width: 2em;
+    }
+    marquee{
+        color: #000;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 710px) {
+    nav{
+        height: 100vh;
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        width: 40%;
+        background-color: #111;
+        right: 0;
+        top: 0;
+        border: none;
+        border-radius: 0;
+        z-index: 100;
+        overflow-x: hidden;
+        transform: translateX(100%);
+		transition: transform .5s ease-in-out;
+		}
+    nav a{
+        display: block;
+        padding: 1.1em;
+        font-size: 24px;
+    }
+    .closebtn{
+        color: #000;
+        visibility: visible;
+        background-color: white;
+        width: 27px;
+        border-radius: 1em;
+        cursor: pointer;
+        right: 0;
+        margin: 40px 40px 0 0;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    .nature{
+        margin-top: 4em;
+        color: #ffd700;
+    }
+    .wildlife:hover{
+        background-color: #3d3f3d;
+        color: red;
+    }
+    .plants:hover{
+        background-color: #3d3f3d;
+        color: #32cd32;
+    }
+    .wonders:hover{
+        background-color: #3d3f3d;
+        color: brown;
+    }
+    .ocean:hover{
+        background-color: #3d3f3d;
+        color: #0033FF;
+    }
+    .menu{
+        width: 2.5em;
+        right: 0;
+        margin: 1em 1em 0 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .help{
+        margin: 12em 1em 0 0;
+    }
+    .slogan{
+        height: 58vh;
+    }
+    .svg{
+        width: 60%;
+    }
+    .logo-div{
+        display: none;
+    }   
+}
+@media only screen and (max-width: 500px) {
+    .slogan{
+        height: 45vh;
+    }
+    .writeup2-div{
+        margin-top: 2em;
+    }
+    .button{
+		width: 150px;
+		height: 50px;
+	}
+}

@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 0;
+    }
+.home{
+    width: 3em;
+    padding: 5px;
+    height: 3em;
+    transition: 0.5s;
+}
+.home:hover{
+  background-color: #8B0000;
+  color: white;
+}
+header{
+    width: 100%;
+    border-bottom: solid yellow 3px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+nav{
+    border-bottom: solid blue 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav div{
+    font-size: 35px;
+    font-weight: bold;
+}
+.svg{
+    width: 1.5em;
+  }
+.logo{
+    width: 1.5em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.logo-div{
+    width: 3em;
+    text-align: center;
+    position: absolute;
+}
+.logo-div .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+.logo-div .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 80%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+.logo-div .tooltiptext {
+    width: 100px;
+    top: 100%;
+    left: 10%;
+    height: 2.5em;
+}
+.logo-div:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icons{
+    display: flex;
+    width: 5.2em;
+}
+.icons button{
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-right: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo{
+      margin-right: 1em;
+      width: 1.5em;
+      margin-top: 0;
+    }
+  nav div{
+  font-size: 20px;
+  }
+  .home{
+  width: 2em;
+  }
+  header{
+    height: 3.5em;
+  }
+  nav{
+    height: 3.3em;
+  }
+  .icons{
+    width: 5.1em;
+    margin-right: 0;
+  }
+.svg{
+    display: none;
+}
+.icons button{
+    margin-top: 0em;
+    margin-right: 0;
+}
+.nn{
+    text-align: center;
+    width: 50%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+.head-img{
+    width: 100%;
+    height: 20em;
+}
+.title{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.title2{
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+.content{
+    width: 100%;
+    height: 18em;
+    overflow-x: scroll;
+    display: flex;
+    gap: 1em;
+}
+.eng-img{
+    width: 20em;
+    height: 13em;
+    border-radius: 10px;
+}
+.name{
+    text-align: center;
+    font-weight: bold;
+}
+.arrow{
+    position: absolute;
+    z-index: 10;
+    margin-right: 3em;
+    right: 0;
+    margin-top: 14.5em;
+    width: 2.5em;
+    animation: pop alternate-reverse infinite 1s;
+  }
+  @keyframes pop{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(15px);
+    }
+  }
+  .list{
+    font-weight: bold;
+  }
+  .organization-img{
+    width: 50%;
+}
+.main{
+    box-shadow: 0 8px 4px 0 rgba(0,0,0,0.4);
+}
+.features{
+    display: flex;
+    gap: 1em;
+    width: 90%;
+}
+.edu-img{
+    width: 100%;
+    height: 10em;
+}
+.flex{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.rrrc{
+    width: 100%;
+}
+.donate-div{
+    width: 100%;
+    height: 15em;
+    overflow: hidden;
+}
+.donate{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+.donate:hover{
+    transform: scale(1.1);
+}
+.donate-div:hover{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0);
+}
+.svg{
+  width: 1.5em;
+}
+@media only screen and (max-width: 550px) {
+  .organization-img{
+    width: 100%;
+  }
+  .none{
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .icons button{
+    font-size: 10px;
+  }
+  .nn{
+    font-size: 15px;
+  }
+  .edu-img{
+    height: 7em;
+  }
+  .eng-img{
+    width: 12em;
+    height: 10em;
+  }
+  .content{
+    height: 15em;
+  }
+  .arrow{
+    margin-top: 11.5em;
+  }
+}
+
+
+
+
+
+
+footer{
+    background-color: #24262b;
+  }
+  .footer-container{
+    max-width: 1190px;
+    margin: auto;
+    text-align: center;
+  }
+  ul{
+    list-style: none;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-col{
+    width: 11%;
+    padding: 0 15px;
+    flex-wrap: wrap;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    background-color: red;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: white;
+    padding-left: 10px;
+  }
+  .footer-col .social-links{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,225,225,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    transition: all 0 .5 ease;
+    color: #bbbbbb;
+  }
+  .footer-col .social-links:hover{
+    color: #24262b;
+    background-color: white;
+    transition: all 0 .5 ease;
+  }
+  
+  @media(max-width: 767px){
+    .footer-col {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+    .sub{
+      flex-wrap: wrap;
+    }
+  }
+  @media(max-width: 574px){
+    .footer-col {
+      width: 100%;
+    }
+  }
