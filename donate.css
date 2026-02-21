@@ -126,7 +126,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 45vh;
-    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('others/website4.jpg');
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://ecogreen.org.ng/wp-content/uploads/2022/08/donation-detail-6.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -289,5 +289,16 @@ nav {
         font-size: 1.1rem;
     }
 }
-body { font-family: "Inter", sans-serif !important; }
-h1, h2, h3, h4, h5, h6 { font-family: "Playfair Display", serif !important; }
+
+body {
+    font-family: "Inter", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif !important;
+}
