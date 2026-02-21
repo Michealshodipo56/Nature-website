@@ -81,6 +81,13 @@ In summary, while poisonous plants must be handled with care, their contribution
 
     </div>
 
+    <div class="search-section">
+        <input type="text" id="poisonousSearch" placeholder="Search for poisonous plants...">
+    </div>
+    <div id="noResults" style="display: none;">
+        🌵 No poisonous plants found matching your search.
+    </div>
+
     <div class="posionous">
 
         <div class="content">
@@ -515,5 +522,35 @@ In summary, while poisonous plants must be handled with care, their contribution
           </div>
         </div>
       </footer>
+    <script>
+        const searchInput = document.getElementById("poisonousSearch");
+        const noResults = document.getElementById("noResults");
+        const poisonousContainer = document.querySelector(".posionous");
+        const poisonousEntries = poisonousContainer.querySelectorAll(".content");
+
+        searchInput.addEventListener("input", () => {
+            const filter = searchInput.value.toLowerCase().trim();
+            let totalVisible = 0;
+
+            poisonousEntries.forEach(entry => {
+                const nameElement = entry.querySelector(".name");
+                if (!nameElement) return;
+
+                const name = nameElement.textContent.toLowerCase();
+                const hr = entry.nextElementSibling && entry.nextElementSibling.tagName === "HR" ? entry.nextElementSibling : null;
+
+                if (name.includes(filter)) {
+                    entry.style.display = ""; 
+                    if (hr) hr.style.display = "";
+                    totalVisible++;
+                } else {
+                    entry.style.display = "none";
+                    if (hr) hr.style.display = "none";
+                }
+            });
+
+            noResults.style.display = totalVisible === 0 ? "block" : "none";
+        });
+    </script>
 </body>
 </html>

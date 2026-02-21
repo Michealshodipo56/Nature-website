@@ -33,6 +33,12 @@
 <div class="top-text">Marine animals, diverse and fascinating, inhabit the vast oceans that cover over 70% of our planet. These creatures range from the smallest plankton to the largest mammal, the blue whale. Marine life is categorized into various groups, including fish, mammals, invertebrates, and reptiles. Fish, like the vibrant clownfish and the majestic shark, dominate the oceans. Marine mammals, such as dolphins and seals, are known for their intelligence and playful behaviors. Invertebrates, including octopuses, jellyfish, and coral, showcase incredible adaptability and complexity. Sea turtles, as marine reptiles, play vital roles in ocean ecosystems. The ocean's depth and breadth provide unique habitats, from the sunlit surface waters to the dark, pressure-filled abyssal zones. Coral reefs, often called the "rainforests of the sea," support immense biodiversity and are crucial for coastal protection and fisheries. Mangroves and seagrass beds are essential for breeding and nursery grounds. However, marine animals face threats from human activities. Pollution, overfishing, and climate change significantly impact their habitats and populations. Conservation efforts are critical to protect these species and maintain the health of our oceans, ensuring the survival of marine biodiversity for future generations.</div>
 
 <div class="content">
+    <div class="search-section">
+        <input type="text" id="marineSearch" placeholder="Search for marine animals...">
+    </div>
+    <div id="noResults" style="display: none;">
+         No marine animals found matching your search.
+    </div>
     <a href=""><div class="up">▴</div></a>
     <div class="title">FISH</div>
     <div class="type">Freshwater Fish</div>
@@ -828,5 +834,63 @@
     </div>
   </footer>
 
+    <script>
+        const searchInput = document.getElementById("marineSearch");
+        const noResults = document.getElementById("noResults");
+        const content = document.querySelector(".content");
+        const features = content.querySelectorAll(".feature");
+        const titles = content.querySelectorAll(".title");
+        const types = content.querySelectorAll(".type");
+
+        searchInput.addEventListener("input", () => {
+            const filter = searchInput.value.toLowerCase().trim();
+            let totalVisible = 0;
+
+            features.forEach(feature => {
+                const nameElement = feature.querySelector(".name");
+                if (!nameElement) return;
+
+                const name = nameElement.textContent.toLowerCase();
+                const hr = feature.nextElementSibling && feature.nextElementSibling.tagName === "HR" ? feature.nextElementSibling : null;
+
+                if (name.includes(filter)) {
+                    feature.style.display = ""; 
+                    if (hr) hr.style.display = "";
+                    totalVisible++;
+                } else {
+                    feature.style.display = "none";
+                    if (hr) hr.style.display = "none";
+                }
+            });
+
+            titles.forEach(title => {
+                let next = title.nextElementSibling;
+                let hasVisible = false;
+                while (next && !next.classList.contains("title")) {
+                    if (next.classList.contains("feature") && next.style.display !== "none") {
+                        hasVisible = true;
+                        break;
+                    }
+                    next = next.nextElementSibling;
+                }
+                title.style.display = hasVisible ? "" : "none";
+            });
+
+            types.forEach(type => {
+                let next = type.nextElementSibling;
+                let hasVisible = false;
+                while (next && !next.classList.contains("type") && !next.classList.contains("title")) {
+                    if (next.classList.contains("feature") && next.style.display !== "none") {
+                        hasVisible = true;
+                        break;
+                    }
+                    next = next.nextElementSibling;
+                }
+                type.style.display = hasVisible ? "" : "none";
+            });
+
+            noResults.style.display = totalVisible === 0 ? "block" : "none";
+        });
+    </script>
 </body>
 </html>

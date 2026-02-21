@@ -158,6 +158,45 @@ nav div{
 .top{
     margin-top: 6em;
 }
+
+.search-section {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 2rem;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    max-width: 25rem;
+    border-radius: 2em;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+input:focus {
+    border-color: #32cd32;
+    box-shadow: 0 4px 15px rgba(50, 205, 50, 0.1);
+    max-width: 30rem;
+}
+
+#noResults {
+    color: #555;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 80%;
+    text-align: center;
+    padding: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .image{
     border-radius: 15px; 
     width: 100%;
