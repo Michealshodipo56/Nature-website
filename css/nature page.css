@@ -1,18 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
   font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    padding: 0;
-    }
-.home{
-    width: 3em;
-    padding: 5px;
-    height: 3em;
-    transition: 0.5s;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.home:hover{
-  background-color: #8B0000;
+.home{
+    width: 2.5em;
+    height: 2.5em;
+    padding: 5px;
+    display: block;
+}
+.home path {
+    fill: black;
+    stroke: black;
+}
+nav > a:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: red;
   color: white;
+  height: 100%;
+  padding: 0 15px;
+  transition: 0.3s;
+}
+nav > a:first-child:hover {
+  background-color: #8B0000;
+}
+body > div:nth-child(2) {
+    padding: 20px 10px;
+    line-height: 1.6;
 }
 header{
     width: 100%;
@@ -23,27 +43,48 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
+    padding: 0 20px 0 0; /* No left padding so gold box touches edge */
 }
 nav div{
     font-size: 35px;
     font-weight: bold;
+    font-family: 'Cinzel', serif;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 .logo{
-  width: 1.5em;
-  padding: 0;
+  width: 2.5em;
+  height: 2.5em;
+  display: block;
 }
 .svg{
   width: 1.5em;
+  height: 1.5em;
+  display: block;
 }
 .icons button{
   background-color: red;
   color: #fff;
   border: none;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
   cursor: pointer;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 12px 0px 12px;
   font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.icons button:hover{
+  background-color: #8B0000;
 }
 @media only screen and (max-width: 550px) {
   .logo{
@@ -87,6 +128,7 @@ nav{
   gap: 1em;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 10px;
 }
 .back{
   width: 20em;
@@ -113,6 +155,7 @@ nav{
   margin-top: 1em;
   box-shadow: 0 5px 5px 0 rgba(0,0,0);
   transition: 0.5s;
+  font-family: 'Cinzel', serif;
 }
 .content a{
   text-decoration: none;
@@ -123,17 +166,28 @@ nav{
 .title{
   font-weight: bold;
   font-size: 1.5em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5em;
+  border-bottom: 3px solid red;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 .visit{
   font-weight: bold;
   text-align: center;
   font-size: 2em;
+  font-family: 'Cinzel', serif;
+}
+.conservation {
+    padding: 0 10px;
 }
 .section-img{
   display: flex;
   width: 100%;
   gap: 1em;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
 }
 .section-img img{
   width: 25em;
@@ -169,6 +223,7 @@ nav{
 
 footer{
   background-color: #24262b;
+  padding: 50px 0;
 }
 .footer-container{
   max-width: 1190px;
